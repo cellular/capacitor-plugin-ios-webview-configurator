@@ -1,6 +1,6 @@
 
   Pod::Spec.new do |s|
-    s.name = 'CapacitorWebviewConfigurator'
+    s.name = 'CapacitorPluginIosWebviewConfigurator'
     s.version = '0.0.1'
     s.summary = '""'
     s.license = 'MIT'
