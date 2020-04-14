@@ -23,6 +23,10 @@ setWebviewBounce(true);
 
 Set the back/forward swipe gestures support for iOS
 
+### getBackForwardNavigationGesturesState()
+
+Get the back/forward swipe gestures state for iOS
+
 ### setWebviewBounce()
 
 Set webview bounce for iOS
