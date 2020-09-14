@@ -16,7 +16,9 @@ public class WebviewConfiguratorPlugin: CAPPlugin {
     }
     
     @objc func getBackForwardNavigationGesturesState(_ call: CAPPluginCall) {
-        call.resolve(["data":  self.bridge.getWebView()?.allowsBackForwardNavigationGestures ?? false]);
+        DispatchQueue.main.async {
+                    call.resolve(["data":  self.bridge.getWebView()?.allowsBackForwardNavigationGestures ?? false]);
+               }
     }
 
     @objc func setWebviewBounce(_ call: CAPPluginCall) {
