@@ -1,6 +1,12 @@
-import { Plugins } from "@capacitor/core";
+import { registerPlugin } from '@capacitor/core';
 
-const { WebviewConfiguratorPlugin } = Plugins;
+export interface WebviewConfiguratorPlugin {
+  setBackForwardNavigationGestures(options: { enable: boolean }): Promise<void>;
+  getBackForwardNavigationGesturesState(): Promise<{ data: boolean }>;
+  setWebviewBounce(options: { enable: boolean }): Promise<void>;
+}
+
+export const WebviewConfiguratorPlugin = registerPlugin<WebviewConfiguratorPlugin>('WebviewConfiguratorPlugin');
 
 export function setBackForwardNavigationGestures(enable: boolean) {
   try {
@@ -8,12 +14,9 @@ export function setBackForwardNavigationGestures(enable: boolean) {
   } catch (error) {}
 }
 
-export async function getBackForwardNavigationGesturesState(): Promise<
-  boolean
-> {
+export async function getBackForwardNavigationGesturesState(): Promise<boolean> {
   try {
-    return await WebviewConfiguratorPlugin.getBackForwardNavigationGesturesState()
-      .data;
+    return (await WebviewConfiguratorPlugin.getBackForwardNavigationGesturesState()).data;
   } catch (error) {}
 }
 
