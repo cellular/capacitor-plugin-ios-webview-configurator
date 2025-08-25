@@ -13,12 +13,12 @@
   "author": "Dario Lehmhus",
   "license": "MIT",
   "dependencies": {
-    "@capacitor/android": "^7.0.0",
-    "@capacitor/core": "^7.0.0",
-    "@capacitor/ios": "^7.0.0"
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/ios": "^7.4.3"
   },
   "devDependencies": {
-    "typescript": "^5.0.2"
+    "typescript": "^5.9.2"
   },
   "files": [
     "dist/",
